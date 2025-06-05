@@ -94,6 +94,8 @@ public class AuthController {
 
         userService.save(user);
 
-        return ResponseEntity.ok("User registered successfully");
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "User registered successfully");
+        return ResponseEntity.ok(response);
     }
 } 
